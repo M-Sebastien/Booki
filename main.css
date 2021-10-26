@@ -1,0 +1,62 @@
+@import url("variables.css");
+
+/* ========== BODY ========== */
+body {
+  background-color: rgb(71, 100, 14);
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container {
+  background-color: rgb(167, 167, 62);
+  margin: 0px 10px 5px 10px;
+}
+a {
+  text-decoration: none;
+  color: var(--main-blue);
+}
+
+/* ========== HEADER / NAV ========== */
+
+.header {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 75px;
+}
+
+.header-logo {
+  height: 50px;
+  padding-left: 10px;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  align-items: stretch;
+  width: 350px;
+  height: 100%;
+}
+
+.nav > ul {
+  background-color: rgb(255, 208, 205);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 350px;
+  padding-left: 0;
+  list-style: none;
+}
+
+nav > ul > li {
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: flex-end;
+}
+
+nav > ul > li:hover {
+  border-top: 2px solid var(--main-blue);
+}
