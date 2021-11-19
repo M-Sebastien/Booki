@@ -1,5 +1,14 @@
 :root {
+  /* === Colors === */
   --main-blue: #0065fc;
   --light-blue: #deebff;
   --bg-grey: #f2f2f2;
+  --main-white: #ffffff;
+  --main-black: #040404;
+  --stars-grey: #e2e2e2;
+  /* === Font-size === */
+  --fs-small: 14px;
+  --fs-h1: 20px;
+  --fs-h2: 18px;
+  --fs-h3: 16px;
 }

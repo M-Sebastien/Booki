@@ -1,26 +1,65 @@
 @import url("variables.css");
 
-/* ========== BODY ========== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: rgb(71, 100, 14);
   font-family: "Raleway", sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #container {
-  background-color: rgb(167, 167, 62);
-  margin: 0px 10px 5px 10px;
+  margin: 0px 30px;
 }
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  color: var(--main-black);
+  margin: 0;
+}
+
+p {
+  font-size: var(--fs-small);
+  color: var(--main-black);
+}
+
 a {
   text-decoration: none;
   color: var(--main-blue);
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.empty-star {
+  color: var(--stars-grey);
+}
 /* ========== HEADER / NAV ========== */
 
 .header {
-  background-color: cornflowerblue;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -34,29 +73,423 @@ a {
 }
 
 nav {
-  background-color: black;
-  display: flex;
-  align-items: stretch;
-  width: 350px;
   height: 100%;
+  width: auto;
 }
 
 .nav > ul {
-  background-color: rgb(255, 208, 205);
   display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav > ul > li > a {
+  display: flex;
+  align-items: center;
+  color: var(--main-black);
+  height: 100%;
+  padding: 0 20px;
+}
+
+nav > ul > li > a:hover {
+  border-top: 1px solid var(--main-blue);
+  color: var(--main-blue);
+}
+
+/* ========== MAIN ========== */
+
+/* ========== TITLES ==========*/
+
+.main-title-h1 {
+  margin-bottom: 5px;
+}
+
+.main-subtitle {
+  margin-top: 5px;
+}
+/* ========== SEARCH ========== */
+/* ========== SEARCH FORM ========== */
+
+.search-div {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.map-marker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--bg-grey);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#search-input {
+  border: 1px solid var(--bg-grey);
+  padding-left: 10px;
+}
+
+input::placeholder {
+  font-weight: bold;
+  color: var(--main-black);
+  opacity: 1;
+}
+
+.search-button {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  padding: 15px;
+  border: var(--main-white);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.search-div .fa-search {
+  display: none;
+}
+
+/* ========== SEARCH FILTERS ========== */
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  width: 60%;
+  max-width: 900px;
+}
+
+.filters-title {
+  font-weight: bold;
+}
+
+.filters-button {
+  background-color: var(--main-white);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 40px;
+  padding: 5px 10px 5px 0;
+  border: 2px solid var(--bg-grey);
+  border-radius: 25px;
+}
+.filters-button:hover {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border: 1px 1px 1px 0 solid var(--main-blue);
+}
+.filters-button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  margin-left: -1px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 50px;
+  background-color: var(--light-blue);
+  color: var(--main-blue);
+}
+
+/* ========== SEARCH INFO ========== */
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.info i {
+  display: flex;
+  align-items: center;
+}
+.fa-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-blue);
+  font-size: 12px;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  border: 3px solid var(--bg-grey);
+  border-radius: 50px;
+}
+.info-text {
+  font-size: var(--fs-small);
+}
+
+/* ========== DESKTOP-FIRST-LAYOUT ========== */
+
+.desktop-first-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* ========== CARD BASE ========== */
+
+.card {
+  background-color: var(--main-white);
+  margin: 0px;
+  padding: 5px;
+  height: 200px;
+  width: 31%;
+  border-radius: 25px;
+  box-shadow: 0px 5px 25px #999;
+  transition: 0.3s;
+}
+
+.card-img {
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px 25px 0 0;
+}
+
+figure {
+  height: 100%;
+  width: 100%;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 70px;
+  padding: 2px 0 2px 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: stretch;
-  width: 350px;
-  padding-left: 0;
-  list-style: none;
 }
 
-nav > ul > li {
-  background-color: cornflowerblue;
+.card-title > h3 {
+  margin: 5px 0 0 0;
+}
+
+.card-price > p {
+  margin: 0;
+}
+
+.card-rating {
   display: flex;
-  align-items: flex-end;
+  row-gap: 5px;
+  font-size: var(--fs-small);
 }
 
-nav > ul > li:hover {
-  border-top: 2px solid var(--main-blue);
+.card:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  box-shadow: 5px 15px 25px #999;
+}
+
+/* ========== ACCOMMODATIONS========== */
+
+#accommodations-section {
+  background-color: var(--bg-grey);
+  width: 70%;
+  height: 575px;
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.accommodations-title {
+  margin: 0 0 0 0;
+}
+
+.accommodations-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 430px;
+}
+
+.show-more {
+  color: var(--main-black);
+  font-weight: bold;
+}
+
+/* ========== POPULAR ========== */
+
+.popular-section {
+  background-color: var(--bg-grey);
+  width: 30%;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.popular-title-trending {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-title {
+  margin: 0;
+}
+
+.popular {
+  height: 500px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-section a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.popular-section .card {
+  height: 30%;
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px #999;
+}
+
+.popular-section .card-img {
+  width: 40%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+
+.popular-section .card-body {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 5px 10px 20px;
+}
+
+.popular-section .card-price {
+  padding-top: 5px;
+}
+
+/* ========== ACTIVITIES ========== */
+
+.activities-section {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.activities {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.bloc-1,
+.bloc-2,
+.bloc-3,
+.bloc-4 {
+  width: 23%;
+}
+
+.activities-section .card {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.activities-section .card-img {
+  height: 350px;
+}
+
+.activities-section .card-title {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 15px;
+}
+
+.activities-section .card-title h3 {
+  font-size: var(--fs-small);
+  margin: 0;
+}
+
+/* ========== BLOC-2 / BLOC-4 ========== */
+
+.bloc-2,
+.bloc-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bloc-2 .size-1,
+.bloc-4 .size-1 {
+  height: 225px;
+}
+
+.bloc-2 .size-1 .card-img,
+.bloc-4 .size-1 .card-img {
+  height: 175px;
+}
+
+.bloc-2 .size-2,
+.bloc-4 .size-2 {
+  height: 150px;
+}
+
+.bloc-2 .size-2 .card-img,
+.bloc-4 .size-2 .card-img {
+  height: 100px;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  background-color: var(--bg-grey);
+  margin: 40px 0 0 0;
+  padding: 30px 0 30px 30px;
+}
+
+.footer-menu {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+footer ul {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+footer li {
+  padding: 5px 0;
+}
+
+footer a {
+  color: var(--main-black);
+}
+
+footer a:hover {
+  color: var(--main-blue);
 }

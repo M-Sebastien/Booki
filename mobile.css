@@ -1,0 +1,173 @@
+/* ========== MOBILE MEDIA QUERIES ========== */
+/* ========== BREAKING POINT = 767px AND LOWER ========== */
+
+#container {
+  margin: 0;
+}
+
+/* ========== HEADER / NAV ========== */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.header-logo {
+  margin: 0;
+  height: 59px;
+  width: 125px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav ul,
+.nav li,
+.nav a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav a {
+  border-bottom: 2px solid var(--bg-grey);
+  padding: 20px 0;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--main-blue);
+  border-top: none;
+  border-bottom: 2px solid var(--main-blue);
+  padding: 20px 0;
+  font-weight: 525;
+}
+
+/* ========== MAIN ========== */
+
+/* ========== TITLES ========== */
+
+.title-search-section {
+  margin: 20px 30px 0 30px;
+}
+
+/* ========== SEARCH ========== */
+/* ========== SEARCH FORM ========== */
+
+form > .search-div {
+  display: flex;
+  justify-content: center;
+}
+.search-div {
+  margin-top: 20px;
+}
+.search-button {
+  border-radius: 10px;
+  margin-left: -5px;
+}
+
+.search-button-text {
+  display: none;
+}
+
+.search-div .fa-search {
+  display: initial;
+}
+
+/* ========== SEARCH FILTERS ========== */
+
+.filters {
+  gap: 10px;
+}
+
+.filters-title {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* ========== POPULAR ========== */
+
+.desktop-first-layout {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0;
+}
+
+.popular-section {
+  width: 100%;
+  border-radius: 0;
+}
+
+/* ========== ACCOMMODATIONS ========== */
+
+#accommodations-section {
+  background-color: var(--main-white);
+  width: 100%;
+  height: 1450px;
+}
+
+.accommodations-cards {
+  display: flex;
+  align-content: space-between;
+  height: 1300px;
+}
+
+.accommodations-cards .card {
+  width: 100%;
+}
+
+/* ========== ACTIVITIES ========== */
+
+.activities-section {
+  margin: 20px 30px 60px 30px;
+  width: auto;
+}
+
+.activities {
+  height: 100%;
+  gap: 25px;
+}
+
+.bloc-1,
+.bloc-2,
+.bloc-3,
+.bloc-4 {
+  width: 100%;
+}
+
+.bloc-2,
+.bloc-4 {
+  gap: 25px;
+}
+
+.bloc-2 .size-1,
+.bloc-2 .size-2,
+.bloc-4 .size-1,
+.bloc-4 .size-2 {
+  height: 100%;
+}
+
+.activities-section .bloc-1 .card-img,
+.activities-section .bloc-2 .card-img,
+.activities-section .bloc-3 .card-img,
+.activities-section .bloc-4 .card-img {
+  height: 150px;
+}
+
+/* ========== FOOTER ========== */
+
+.footer-menu {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer ul {
+  padding-top: 10px;
+}

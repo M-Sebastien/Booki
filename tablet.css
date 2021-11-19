@@ -1,0 +1,36 @@
+/* ========== TABLET MEDIA QUERIES ========== */
+/* ========== BREAKING POINT = MIN 768px AND MAX 991 ========== */
+
+/* ========== MAIN ========== */
+
+/* ========== SEARCH ========== */
+/* ========== SEARCH FORM ========== */
+
+form > .search-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== SEARCH FILTERS ========== */
+
+.filters {
+  width: auto;
+}
+
+/* ========== POPULAR ========== */
+
+.desktop-first-layout {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.popular-section {
+  width: 100%;
+}
+
+/* ========== ACCOMMODATIONS ========== */
+
+#accommodations-section {
+  width: 100%;
+}
